@@ -4871,7 +4871,7 @@ var DLG1_DlgObj = new A5.DialogComponentHelper('DLG1',{
 	"SPECIALREQUEST": "",
 	"COMENT": "",
 	"TEST1": "0",
-	"TEST2": "27/12/2024",
+	"TEST2": "31/12/2024",
 	"LSTVISITHEAD": "",
 	"DEVLAT": "",
 	"DEVLONG": "",
@@ -5031,7 +5031,7 @@ var DLG1_DlgObj = new A5.DialogComponentHelper('DLG1',{
 	"LSTGEOLOC": "",
 	"MEDREP": "Invalid expression: convert_number(\"\"+convert_type(a,\"N\"))",
 	"MEDREP_1": "Invalid expression: convert_number(\"\"+convert_type(a,\"N\"))",
-	"DATE": "27/12/2024",
+	"DATE": "31/12/2024",
 	"PASSOK": "0",
 	"SYNCINPROGRESS": "0",
 	"SAVING": "0",
@@ -5072,7 +5072,7 @@ var DLG1_DlgObj = new A5.DialogComponentHelper('DLG1',{
 	"SPECIALREQUEST": "",
 	"COMENT": "",
 	"TEST1": "0",
-	"TEST2": "27/12/2024",
+	"TEST2": "31/12/2024",
 	"LSTVISITHEAD": "",
 	"DEVLAT": "",
 	"DEVLONG": "",
@@ -5232,7 +5232,7 @@ var DLG1_DlgObj = new A5.DialogComponentHelper('DLG1',{
 	"LSTGEOLOC": "",
 	"MEDREP": "Invalid expression: convert_number(\"\"+convert_type(a,\"N\"))",
 	"MEDREP_1": "Invalid expression: convert_number(\"\"+convert_type(a,\"N\"))",
-	"DATE": "27/12/2024",
+	"DATE": "31/12/2024",
 	"PASSOK": "0",
 	"SYNCINPROGRESS": "0",
 	"SAVING": "0",
@@ -5625,23 +5625,16 @@ if(typeof DLG1_DlgObj !== 'undefined' && typeof DLG1_DlgObj.fieldHelpers!== 'und
 });}
 /* DIALOG2FieldHelperBegin:DITRICT1 */
 if(typeof DLG1_DlgObj !== 'undefined' && typeof DLG1_DlgObj.fieldHelpers!== 'undefined') if(!DLG1_DlgObj.fieldHelpers['DITRICT1'])DLG1_DlgObj.fieldHelpers['DITRICT1'] = new A5.EditCombo(function(eleId,keyFilter) {
+	if(!this._listbox._window.hidden) return this._data;
 	var rowNumber = $u.s.toNum(  $u.s.word($u.s.word(this._targetId,2,'.V.R'),1,'.') );
 	;
-	var _filterState = '';
-	if(this._filterState != _filterState) {
-		this._filterState = _filterState;
 		var data = DLG1_DlgObj.getData();	
 		data = data + '&' + DLG1_DlgObj.getStateInfo();
-		data = '__FormID=DLG1&_rowNumber='+rowNumber+'&__FormAction=getEditComboData&_Part=dialog2&_varname=DITRICT1&' + data;
-		data = data + '&__editComboId=' + eleId + '&__editComboTextFilter=' + keyFilter;
-		var rsData = DLG1_DlgObj._getRepeatingSectionInfo();
-		if(rsData != '') data = data + '&' + rsData; 
-		data = $u.s.tran(data,'\n','%0D%0A');
-		A5.ajax.callback(DLG1_DlgObj.ajaxURL,data);
-		return [{'*static' : 'Loading...'}];
-	} else {
-		return this._data;
-	}	
+	data = '__FormID=DLG1&_rowNumber='+rowNumber+'&__FormAction=getEditComboData&_Part=dialog2&_varname=DITRICT1&' + data;
+	data = data + '&__editComboId=' + eleId + '&__editComboTextFilter=' + keyFilter;
+	data = $u.s.tran(data,'\n','%0D%0A');
+	A5.ajax.callback(DLG1_DlgObj.ajaxURL,data);
+	return [{'*static' : 'Loading...'}];
 }
 ,{
 	theme: 'Alpha-Magenta',
@@ -5701,24 +5694,17 @@ DLG1_DlgObj._setRowState(1,true);
 /* DIALOG2FieldHelperEnd:DITRICT1 */
 /* DIALOG2FieldHelperBegin:REGION1 */
 if(typeof DLG1_DlgObj !== 'undefined' && typeof DLG1_DlgObj.fieldHelpers!== 'undefined') if(!DLG1_DlgObj.fieldHelpers['REGION1'])DLG1_DlgObj.fieldHelpers['REGION1'] = new A5.EditCombo(function(eleId,keyFilter) {
+	if(!this._listbox._window.hidden) return this._data;
 	var rowNumber = $u.s.toNum(  $u.s.word($u.s.word(this._targetId,2,'.V.R'),1,'.') );
 	;
 var DISTRICT_ID = DLG1_DlgObj.getValue('DISTRICT_ID',rowNumber);
-	var _filterState = DISTRICT_ID;
-	if(this._filterState != _filterState) {
-		this._filterState = _filterState;
 		var data = DLG1_DlgObj.getData();	
 		data = data + '&' + DLG1_DlgObj.getStateInfo();
-		data = '__FormID=DLG1&_rowNumber='+rowNumber+'&__FormAction=getEditComboData&_Part=dialog2&_varname=REGION1&' + data;
-		data = data + '&__editComboId=' + eleId + '&__editComboTextFilter=' + keyFilter;
-		var rsData = DLG1_DlgObj._getRepeatingSectionInfo();
-		if(rsData != '') data = data + '&' + rsData; 
-		data = $u.s.tran(data,'\n','%0D%0A');
-		A5.ajax.callback(DLG1_DlgObj.ajaxURL,data);
-		return [{'*static' : 'Loading...'}];
-	} else {
-		return this._data;
-	}	
+	data = '__FormID=DLG1&_rowNumber='+rowNumber+'&__FormAction=getEditComboData&_Part=dialog2&_varname=REGION1&' + data;
+	data = data + '&__editComboId=' + eleId + '&__editComboTextFilter=' + keyFilter;
+	data = $u.s.tran(data,'\n','%0D%0A');
+	A5.ajax.callback(DLG1_DlgObj.ajaxURL,data);
+	return [{'*static' : 'Loading...'}];
 }
 ,{
 	theme: 'Alpha-Magenta',
@@ -5730,13 +5716,10 @@ var DISTRICT_ID = DLG1_DlgObj.getValue('DISTRICT_ID',rowNumber);
 	body: {
 		style: 'overflow: auto;'
 	},
-	onSelect:  function(data,classInst) {
-	DLG1_DlgObj._batchChange = true;
-	var _data = data.ID; if(_data || _data == '' || _data == null) {  if(_data != null) {_data = _data.split('{crlf}').join('\n');} DLG1_DlgObj.setValue('REGION_ID1',_data);}
-	DLG1_DlgObj._batchChange = false;
-	setTimeout(Function('$e.execute(\''+this.id+'\',\'change\');'),0);
+	onSelect: function(data,classInst) { 
+	$e.execute(this,'change');
 	if(this.value == '&nbsp;') this.value = '';;
-DLG1_DlgObj._setRowState(1,true);
+;
 	classInst.selecting = false;
 }
 ,
@@ -5760,19 +5743,6 @@ return '' + data.REGION;
 	},
 	selectionRequired: false,
 	progressiveFilterMode: 'in-value',
-	onNoSelect: function(ci) {
-if(ci._initValue != this.value) {
-	if(ci.valueInList(this.value)) {
-		var data = ci._listbox.getData(this.value);
-		DLG1_DlgObj._batchChange = true;
-		var _data = data.ID; if(_data || _data == '' || _data == null) {  if(_data != null) {_data = _data.split('{crlf}').join('\n');} DLG1_DlgObj.setValue('REGION_ID1',_data);}
-		DLG1_DlgObj._batchChange = false;
-		setTimeout(Function('$e.execute(\''+this.id+'\',\'change\');'),0);
-		if(this.value == '&nbsp;') this.value = '';;
-DLG1_DlgObj._setRowState(1,true);
-	}
-}
-},
 	_filterState: null,
 	selectionRequiredFilterMode: 'default'
 });
@@ -63306,9 +63276,9 @@ DLG1_DlgObj.__info = {
 	"createdBy": "Paul",
 	"lastUpdatedBy": "",
 	"dateCreated": "2018-10-14",
-	"dateLastEdited": "2024-12-27",
+	"dateLastEdited": "2024-12-31",
 	"comments": "",
-	"revisionnumber": 1969
+	"revisionnumber": 1972
 }
 A5.__csdfmt = (obj) =>{ if(obj) return obj.stateInfo.__dtfmt};DLG1_DlgObj._workingPreview = false;
 $u.decimal = '.';
@@ -65960,7 +65930,7 @@ if(listObj) listObj._state.paginated = false;
 if(listObj) listObj._state._optimizedJSON = true;
 if(listObj) listObj._state.highlight = {  };
 if(listObj) listObj._state.whereClause = '';
-if(listObj) listObj._state.whereParameters = '0|||N|MMEDREPID\n0|||N|POIDID\n0|||N|MPOIID\n27/12/2024|||D|MDATE\n0|||N|LOADTYPE\n0|||N|MCOMPID\n0|||N|SYNCINPROGRESS\n0|||N|MREPID\n|||D|MTDATE\n0|||N|SHOWALLDAYINPLAN\n0|||N|MREPID_1\n|||C|MMEDREPNAME\n|||C|MREGIONDESC\n';
+if(listObj) listObj._state.whereParameters = '0|||N|MMEDREPID\n0|||N|POIDID\n0|||N|MPOIID\n31/12/2024|||D|MDATE\n0|||N|LOADTYPE\n0|||N|MCOMPID\n0|||N|SYNCINPROGRESS\n0|||N|MREPID\n|||D|MTDATE\n0|||N|SHOWALLDAYINPLAN\n0|||N|MREPID_1\n|||C|MMEDREPNAME\n|||C|MREGIONDESC\n';
 listObj._state.order = '';
 		
 		var flagPersist = false;
@@ -66053,7 +66023,7 @@ if(listObj) listObj._state.paginated = false;
 if(listObj) listObj._state._optimizedJSON = true;
 if(listObj) listObj._state.highlight = {  };
 if(listObj) listObj._state.whereClause = '';
-if(listObj) listObj._state.whereParameters = '0|||N|MMEDREPID\n0|||N|POIDID\n0|||N|MPOIID\n27/12/2024|||D|MDATE\n0|||N|LOADTYPE\n0|||N|MCOMPID\n0|||N|SYNCINPROGRESS\n0|||N|MREPID\n|||D|MTDATE\n0|||N|SHOWALLDAYINPLAN\n0|||N|MREPID_1\n|||C|MMEDREPNAME\n|||C|MREGIONDESC\n';
+if(listObj) listObj._state.whereParameters = '0|||N|MMEDREPID\n0|||N|POIDID\n0|||N|MPOIID\n31/12/2024|||D|MDATE\n0|||N|LOADTYPE\n0|||N|MCOMPID\n0|||N|SYNCINPROGRESS\n0|||N|MREPID\n|||D|MTDATE\n0|||N|SHOWALLDAYINPLAN\n0|||N|MREPID_1\n|||C|MMEDREPNAME\n|||C|MREGIONDESC\n';
 listObj._state.order = 'Description';
 		
 		var flagPersist = false;
@@ -66122,7 +66092,7 @@ if(listObj) listObj._state.paginated = false;
 if(listObj) listObj._state._optimizedJSON = true;
 if(listObj) listObj._state.highlight = {  };
 if(listObj) listObj._state.whereClause = '';
-if(listObj) listObj._state.whereParameters = '0|||N|MMEDREPID\n0|||N|POIDID\n0|||N|MPOIID\n27/12/2024|||D|MDATE\n0|||N|LOADTYPE\n0|||N|MCOMPID\n0|||N|SYNCINPROGRESS\n0|||N|MREPID\n|||D|MTDATE\n0|||N|SHOWALLDAYINPLAN\n0|||N|MREPID_1\n|||C|MMEDREPNAME\n|||C|MREGIONDESC\n';
+if(listObj) listObj._state.whereParameters = '0|||N|MMEDREPID\n0|||N|POIDID\n0|||N|MPOIID\n31/12/2024|||D|MDATE\n0|||N|LOADTYPE\n0|||N|MCOMPID\n0|||N|SYNCINPROGRESS\n0|||N|MREPID\n|||D|MTDATE\n0|||N|SHOWALLDAYINPLAN\n0|||N|MREPID_1\n|||C|MMEDREPNAME\n|||C|MREGIONDESC\n';
 listObj._state.order = 'Description';
 		
 		var flagPersist = false;
@@ -66178,7 +66148,7 @@ if(listObj) listObj._state.paginated = false;
 if(listObj) listObj._state._optimizedJSON = true;
 if(listObj) listObj._state.highlight = {  };
 if(listObj) listObj._state.whereClause = 'company_id = :MCOMPID  AND  medred_id = :MMEDREPID';
-if(listObj) listObj._state.whereParameters = '0|||N|MMEDREPID\n0|||N|POIDID\n0|||N|MPOIID\n27/12/2024|||D|MDATE\n0|||N|LOADTYPE\n0|||N|MCOMPID\n0|||N|SYNCINPROGRESS\n0|||N|MREPID\n|||D|MTDATE\n0|||N|SHOWALLDAYINPLAN\n0|||N|MREPID_1\n|||C|MMEDREPNAME\n|||C|MREGIONDESC\n';
+if(listObj) listObj._state.whereParameters = '0|||N|MMEDREPID\n0|||N|POIDID\n0|||N|MPOIID\n31/12/2024|||D|MDATE\n0|||N|LOADTYPE\n0|||N|MCOMPID\n0|||N|SYNCINPROGRESS\n0|||N|MREPID\n|||D|MTDATE\n0|||N|SHOWALLDAYINPLAN\n0|||N|MREPID_1\n|||C|MMEDREPNAME\n|||C|MREGIONDESC\n';
 listObj._state.order = '';
 		
 		var flagPersist = false;
@@ -66219,7 +66189,7 @@ if(listObj) listObj._state.paginated = false;
 if(listObj) listObj._state._optimizedJSON = true;
 if(listObj) listObj._state.highlight = {  };
 if(listObj) listObj._state.whereClause = 'company_id = :MCOMPID  AND  medred_id = :MMEDREPID';
-if(listObj) listObj._state.whereParameters = '0|||N|MMEDREPID\n0|||N|POIDID\n0|||N|MPOIID\n27/12/2024|||D|MDATE\n0|||N|LOADTYPE\n0|||N|MCOMPID\n0|||N|SYNCINPROGRESS\n0|||N|MREPID\n|||D|MTDATE\n0|||N|SHOWALLDAYINPLAN\n0|||N|MREPID_1\n|||C|MMEDREPNAME\n|||C|MREGIONDESC\n';
+if(listObj) listObj._state.whereParameters = '0|||N|MMEDREPID\n0|||N|POIDID\n0|||N|MPOIID\n31/12/2024|||D|MDATE\n0|||N|LOADTYPE\n0|||N|MCOMPID\n0|||N|SYNCINPROGRESS\n0|||N|MREPID\n|||D|MTDATE\n0|||N|SHOWALLDAYINPLAN\n0|||N|MREPID_1\n|||C|MMEDREPNAME\n|||C|MREGIONDESC\n';
 listObj._state.order = '';
 		
 		var flagPersist = false;
@@ -66299,7 +66269,7 @@ if(listObj) listObj._state.paginated = false;
 if(listObj) listObj._state._optimizedJSON = true;
 if(listObj) listObj._state.highlight = {  };
 if(listObj) listObj._state.whereClause = '';
-if(listObj) listObj._state.whereParameters = '0|||N|MMEDREPID\n0|||N|POIDID\n0|||N|MPOIID\n27/12/2024|||D|MDATE\n0|||N|LOADTYPE\n0|||N|MCOMPID\n0|||N|SYNCINPROGRESS\n0|||N|MREPID\n|||D|MTDATE\n0|||N|SHOWALLDAYINPLAN\n0|||N|MREPID_1\n|||C|MMEDREPNAME\n|||C|MREGIONDESC\n';
+if(listObj) listObj._state.whereParameters = '0|||N|MMEDREPID\n0|||N|POIDID\n0|||N|MPOIID\n31/12/2024|||D|MDATE\n0|||N|LOADTYPE\n0|||N|MCOMPID\n0|||N|SYNCINPROGRESS\n0|||N|MREPID\n|||D|MTDATE\n0|||N|SHOWALLDAYINPLAN\n0|||N|MREPID_1\n|||C|MMEDREPNAME\n|||C|MREGIONDESC\n';
 listObj._state.order = '';
 		
 		var flagPersist = false;
@@ -66368,17 +66338,17 @@ if(listObj._refreshStateMessages) listObj._refreshStateMessages();
 
 
 var listObj = DLG1_DlgObj.getControl('LSTGEOLOC');
-if(listObj) listObj._state.recordCount = 1845;
-if(listObj) listObj._state.recordCountFormatted = '1,845';
+if(listObj) listObj._state.recordCount = 1908;
+if(listObj) listObj._state.recordCountFormatted = '1,908';
 if(listObj) listObj._state.lastBreakValue = '';
-if(listObj) listObj._state.pageCount = 93;
+if(listObj) listObj._state.pageCount = 96;
 if(listObj) listObj._state.pageSize = 20;
 if(listObj) {var ele = $('DLG1.lstgeoloc.RECORDCOUNT'); if(ele) ele.innerHTML = listObj._state.recordCountFormatted;};
 if(listObj) listObj._state.paginated = true;
 if(listObj) listObj._state._optimizedJSON = false;
 if(listObj) listObj._state.highlight = {  };
 if(listObj) listObj._state.whereClause = 'company_id = :MCOMPID  AND  user_id = :MMEDREPID';
-if(listObj) listObj._state.whereParameters = '0|||N|MMEDREPID\n0|||N|POIDID\n0|||N|MPOIID\n27/12/2024|||D|MDATE\n0|||N|LOADTYPE\n0|||N|MCOMPID\n0|||N|SYNCINPROGRESS\n0|||N|MREPID\n|||D|MTDATE\n0|||N|SHOWALLDAYINPLAN\n0|||N|MREPID_1\n|||C|MMEDREPNAME\n|||C|MREGIONDESC\n';
+if(listObj) listObj._state.whereParameters = '0|||N|MMEDREPID\n0|||N|POIDID\n0|||N|MPOIID\n31/12/2024|||D|MDATE\n0|||N|LOADTYPE\n0|||N|MCOMPID\n0|||N|SYNCINPROGRESS\n0|||N|MREPID\n|||D|MTDATE\n0|||N|SHOWALLDAYINPLAN\n0|||N|MREPID_1\n|||C|MMEDREPNAME\n|||C|MREGIONDESC\n';
 listObj._state.order = '';
 		
 		var flagPersist = false;
@@ -66391,10 +66361,10 @@ listObj._state.order = '';
 		
 		
 ;
-if(listObj) listObj._state.pageCount = 93;
+if(listObj) listObj._state.pageCount = 96;
 if(listObj) listObj.setDisplay('content-footer',false);
 DLG1_DlgObj._list_executeEvent('LSTGEOLOC','afterRenderComplete',{});
-listObj._recordNavigatorLinks = ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','93'];
+listObj._recordNavigatorLinks = ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','96'];
 if(listObj._refreshStateMessages) listObj._refreshStateMessages();
 
 
@@ -67200,7 +67170,7 @@ DLG1_DlgObj.initialized = true;
 
 
 
-;DLG1_DlgObj.setStateInfo({ 	__args_n_MMEDREPID: '0', 	__args_n_POIDID: '0', 	__args_n_MPOIID: '0', 	__args_d_MDATE: '27/12/2024', 	__args_n_LOADTYPE: '0', 	__args_n_MCOMPID: '0', 	__args_n_SYNCINPROGRESS: '0', 	__args_n_MREPID: '0', 	__args_d_MTDATE: '', 	__args_n_SHOWALLDAYINPLAN: '0', 	__args_n_MREPID_1: '0', 	__args_c_MMEDREPNAME: '', 	__args_c_MREGIONDESC: '', 	argValuesENC: '7C3tO+HPao0zNV11hCNhkXROUiAe0lvZWY7Xx6LngtmeYNlvKd03vaMUf1FQyyDMHkaLn31fVytMkjMWFQJW2XqMjeADGi+MZr5vQEverln7vv/ExOy11CO5U6OCKIW5xk/RPtEPTtrxO2fjOdAHakWSQaTtZaMtEb3YLLKdbPmE5Y30H2RKcdYqlVDVZ4aEF/iiKqGtqTokVFYa6LkQzhKhD01t1TQ9DsiPUI5F33T/PmPTGHs29E3/aIe9Fpf+0bpCrte2mBhcjWAVmG7ouvtIhcsd681FwhAB0v1Cw0Yk7ByXMFu+CjJ8fw6ME7zCPfQK7AY65BdHFkkdQCHVgk3s4ldq2RJjzyxN6/in2HC528zeJ6ZBgVvhjjevAfN10XLSr4C6x1yiiveWpW3d0HtmgOpfgSddQfmvVyhgXYapOv8VtCze2lOJzia5D8sVaJvE9UwDE8CD6+1/J2TkKNfgovOURssgEZXOeXMECYMahc7GaWIJeVAUjnTTBGF5', 	__debugInfo: 'ssi-6014' });//ssi-6014;
+;DLG1_DlgObj.setStateInfo({ 	__args_n_MMEDREPID: '0', 	__args_n_POIDID: '0', 	__args_n_MPOIID: '0', 	__args_d_MDATE: '31/12/2024', 	__args_n_LOADTYPE: '0', 	__args_n_MCOMPID: '0', 	__args_n_SYNCINPROGRESS: '0', 	__args_n_MREPID: '0', 	__args_d_MTDATE: '', 	__args_n_SHOWALLDAYINPLAN: '0', 	__args_n_MREPID_1: '0', 	__args_c_MMEDREPNAME: '', 	__args_c_MREGIONDESC: '', 	argValuesENC: '7C3tO+HPao0zNV11hCNhkXROUiAe0lvZWY7Xx6LngtmeYNlvKd03vaMUf1FQyyDMHkaLn31fVytMkjMWFQJW2XqMjeADGi+MZr5vQEverln7vv/ExOy11CO5U6OCKIW5xk/RPtEPTtpkq55YT62UGSu1fnpXhq48IwRU5cgTp9E9Py2ZzIoHL5V5EKhzlHR+ZOYirhXVVE+DTd3T/tmdiWG7st/IOhv0r/nSwQKdL4qEzmuP5mGtn9NUx4Pn0IQlif9Js0fCCjhZkVFoG+7Lqvf3pOtXOrGui8DuNU8mmyOm2uT/xslVqWwEPdxSbNVKQTz0mUTddJrSjxq3VlF7/vwju/5TDpV8UyRxNBmTYOpXOYUJjEfpb3K+h+A3mtm/KBdOaF9tfoStgIo3cmmO32wVpjOE5UMrCczQl1gT+g7o7VHfAo4/o/INByEcXk78Njmn9/2lUZJmkKaCqR1mRD6jwi8NkVTo6LpPa+SDO6PxjoWQgc5T240h4qhjrT6Q', 	__debugInfo: 'ssi-6014' });//ssi-6014;
 ;
 
 
