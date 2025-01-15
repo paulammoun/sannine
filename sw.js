@@ -1,7 +1,7 @@
 // **Template code last revised: 08/30/21
 
-const staticCacheName = 'Amiga-Cloud2_pwa_cache-v-01.05';
-const dynamicCacheName = 'Amiga-Cloud2_pwa_dynamic_cache-v-01.05';
+const staticCacheName = 'Amiga-Cloud2_pwa_cache-v-01.08';
+const dynamicCacheName = 'Amiga-Cloud2_pwa_dynamic_cache-v-01.08';
 const dynamicCacheSize = 10;
 const offlineFilename = './offline.html';
 const showDebugInfo = true;
