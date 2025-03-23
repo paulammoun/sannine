@@ -1,7 +1,7 @@
 // **Template code last revised: 08/30/21
 
-const staticCacheName = 'MobilevisitPWAN_pwa_cache-v-01.06';
-const dynamicCacheName = 'MobilevisitPWAN_pwa_dynamic_cache-v-01.06';
+const staticCacheName = 'test Amiga-Cloud2_pwa_cache-v-01.09';
+const dynamicCacheName = 'test Amiga-Cloud2_pwa_dynamic_cache-v-01.09';
 const dynamicCacheSize = 10;
 const offlineFilename = './offline.html';
 const showDebugInfo = true;
@@ -119,6 +119,7 @@ var filesToCache = [
 './planning_16759800.png',
 './rotate.png',
 './searchicon2.png',
+'./settings-778.png',
 './shopping.png',
 './skip.png',
 './index.html',
