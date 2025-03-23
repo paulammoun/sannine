@@ -963,6 +963,94 @@ A5.themes.add('Alpha-Magenta',{
 					}
 				}
 			}
+		},
+		"pcs": {
+			"className": "list",
+			"disabledClassName": "listDisabled",
+			"focusClassName": "listFocus",
+			"columnLayout": {
+				"header": {
+					"className": "listColHeader",
+					"item": {
+						"className": "listColHeaderItem",
+						"hoverClassName": "listColHeaderItemHover",
+						"order": {
+							"ascendingImage": "svgIcon=#alpha-icon-chevronUp:icon",
+							"descendingImage": "svgIcon=#alpha-icon-chevronDown:icon",
+							"className": ""
+						},
+						"resize": {
+							"location": "after",
+							"className": "listColHeaderItemResize",
+							"handle": {
+								"className": "",
+								"size": "14px"
+							}
+						}
+					}
+				},
+				"data": {
+					"item": {
+						"className": "listItemData"
+					}
+				}
+			},
+			"view": {
+				"navigation": {
+					"prev": {
+						"className": "listNavButtonPrev",
+						"pressedClassName": "listNavButtonPressed"
+					},
+					"next": {
+						"className": "listNavButtonNext",
+						"pressedClassName": "listNavButtonPressed"
+					}
+				}
+			},
+			"group": {
+				"navigator": {
+					"location": "right",
+					"offset": 4,
+					"size": 28,
+					"className": "listNav",
+					"focusClassName": ""
+				}
+			},
+			"header": {
+				"className": "listHeader"
+			},
+			"footer": {
+				"className": "listFooter"
+			},
+			"lock": {
+				"className": ""
+			},
+			"content": {
+				"header": {
+					"className": ""
+				},
+				"footer": {
+					"className": ""
+				}
+			},
+			"item": {
+				"className": "listItem",
+				"hoverClassName": "listItem",
+				"selectedClassName": "listItem",
+				"titleClassName": "listItemTitle",
+				"separatorClassName": "listItemSep",
+				"parts": {
+					"mainClassName": "listItemPartMain",
+					"subClassName": "listItemPartSub",
+					"contextClassName": "listItemPartContext",
+					"detailClassName": "listItemPartDetail",
+					"contentClassName": "listItemPartContent",
+					"icons": {
+						"navigate": "svgIcon=#alpha-icon-chevronRight:icon",
+						"navigateSubtle": "svgIcon=#alpha-icon-chevronRight:icon"
+					}
+				}
+			}
 		}
 	},
 	"tree": {

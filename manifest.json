@@ -1,7 +1,7 @@
 {
-    "name": "MobilevisitPWAN",
-    "short_name": "MobilevisitPWAN",
-    "description": "",
+    "name": "test Amiga-Cloud2",
+    "short_name": "Amiga-Cloud2",
+    "description": "aa",
     "icons": [{
       	"src": "icons/icon-72.png",
         "sizes": "72x72",
